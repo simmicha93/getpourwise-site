@@ -107,19 +107,23 @@
     summary::after { content: "+"; position: absolute; right: 4px; top: 15px; color: var(--green); font-family: var(--sans); font-size: 21px; }
     details[open] summary::after { content: "−"; }
     details p { max-width: 610px; margin: -2px 28px 18px 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    details p a { color: var(--green); }
     .final-cta { padding: 58px 0 62px; background: #bdd77f; color: #15201a; }
     .final-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
     .final-cta .section-kicker { color: #344a24; }
     .final-cta h2 { max-width: 670px; margin-top: 9px; font-size: clamp(34px, 4.5vw, 52px); }
     .final-cta .button { flex: 0 0 auto; background: #17231d; border-color: #17231d; color: #f1f2e9; }
+    .final-note { margin: 14px 0 0; font-size: 12px; color: #2a3d22; }
+    .final-note a { font-weight: 700; }
     footer { padding: 25px 0 30px; color: #8e9a91; font-size: 9px; line-height: 1.8; }
     .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
     .footer-main strong { color: #c9d3c8; font-size: 10px; letter-spacing: .1em; }
-    .footer-bottom { padding-top: 15px; }
+    .footer-bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 25px; padding-top: 15px; }
     .footer-bottom p { margin: 0; }
+    .footer-bottom a { color: #d0d9d0; }
     :focus-visible { outline: 2px solid var(--sand); outline-offset: 4px; }
     @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 42px; } .hero { padding: 63px 0 56px; } .menu-card { max-width: 620px; } .trust-line { flex-wrap: wrap; justify-content: flex-start; } .section { padding: 76px 0; } .faq-layout { grid-template-columns: 1fr; gap: 30px; } }
-    @media (max-width: 620px) { .shell { width: min(100% - 36px, 520px); } .nav-links a:not(.nav-cta) { display: none; } .hero-actions { align-items: stretch; flex-direction: column; } .hero-actions .button { width: 100%; } .process-grid, .plans { grid-template-columns: 1fr; } .step { min-height: auto; } .plan-desc { min-height: auto; } .preview-head, .offer-header { align-items: flex-start; flex-direction: column; gap: 13px; } .preview-label { text-align: left; } .sheet-top { align-items: flex-start; flex-direction: column; gap: 5px; } .card-foot { align-items: flex-start; flex-direction: column; } .final-inner { align-items: flex-start; flex-direction: column; } .final-cta .button { width: 100%; } .footer-main { align-items: flex-start; flex-direction: column; gap: 10px; } }
+    @media (max-width: 620px) { .shell { width: min(100% - 36px, 520px); } .nav-links a:not(.nav-cta) { display: none; } .hero-actions { align-items: stretch; flex-direction: column; } .hero-actions .button { width: 100%; } .process-grid, .plans { grid-template-columns: 1fr; } .step { min-height: auto; } .plan-desc { min-height: auto; } .preview-head, .offer-header { align-items: flex-start; flex-direction: column; gap: 13px; } .preview-label { text-align: left; } .sheet-top { align-items: flex-start; flex-direction: column; gap: 5px; } .card-foot { align-items: flex-start; flex-direction: column; } .final-inner { align-items: flex-start; flex-direction: column; } .final-cta .button { width: 100%; } .footer-main, .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; } }
   </style>
 </head>
 <body>
@@ -245,15 +249,15 @@
           <details><summary>Are the cost and price numbers guaranteed?</summary><p>No. Supplier pricing, yields, waste, tax, and local menu prices change. The workbook shows source dates and flags unverified inputs. Its suggested price is a planning calculation from supplied costs and your chosen pour-cost target—not a sales or profit guarantee.</p></details>
           <details><summary>Why are some sample inputs marked unverified?</summary><p>Because an unverified price should not be presented as fact. In the sample, the espresso-shot cost is left blank and affected pricing stays provisional until a real cost and measured yield are supplied.</p></details>
           <details><summary>Does the $497 program include batch recipes?</summary><p>Yes. The Full Program includes the costed menu, batch recipes with yield notes, and a concise staff spec sheet. Batch yields are tied to your service assumptions and should be checked in your bar before rollout.</p></details>
-          <details><summary>How do I pay?</summary><p>Click any buy button to check out securely through Stripe. Card details are handled by Stripe and never touch this site.</p></details>
-          <details><summary>Do you work outside Panama City Beach?</summary><p>The offer is designed for independent bars in Panama City and Panama City Beach, Florida. Confirm delivery format and availability with the service owner before purchase.</p></details>
+          <details><summary>How do I pay?</summary><p>Click any buy button to check out securely through Stripe. Card details are handled by Stripe and never touch this site. After you pay, email your drink list and bottle details to <a href="mailto:hello@getpourwise.com">hello@getpourwise.com</a> to get started.</p></details>
+          <details><summary>Do you work outside Panama City Beach?</summary><p>The offer is designed for independent bars in Panama City and Panama City Beach, Florida. Email <a href="mailto:hello@getpourwise.com">hello@getpourwise.com</a> to ask about other locations before purchase.</p></details>
         </div>
       </div>
     </section>
 
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="shell final-inner">
-        <div><div class="section-kicker">Your bottles. Your pours. Clearer decisions.</div><h2 id="cta-title">Start with the menu you have.</h2></div>
+        <div><div class="section-kicker">Your bottles. Your pours. Clearer decisions.</div><h2 id="cta-title">Start with the menu you have.</h2><p class="final-note">Questions first? Email <a href="mailto:hello@getpourwise.com">hello@getpourwise.com</a>.</p></div>
         <a class="button" href="#plans">Compare the packages <span aria-hidden="true">→</span></a>
       </div>
     </section>
@@ -261,7 +265,7 @@
 
   <footer class="shell">
     <div class="footer-main"><strong>POURWISE</strong><span>Independent bar consulting · Panama City + Panama City Beach, Florida</span></div>
-    <div class="footer-bottom"><p>Prices, recipe yields, and source availability can change. Sample workbook figures are a prototype; verify local costs before service.</p></div>
+    <div class="footer-bottom"><p>Prices, recipe yields, and source availability can change. Sample workbook figures are a prototype; verify local costs before service.</p><p>Contact: <a href="mailto:hello@getpourwise.com">hello@getpourwise.com</a></p></div>
   </footer>
 </body>
 </html>
